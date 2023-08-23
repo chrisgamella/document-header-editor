@@ -72,7 +72,7 @@ To run the tests for this project, you'll need to set up your development enviro
    ```bash
    git clone https://github.com/chrisgamella/document-header-editor.git
 
-   cd python-document-header-editor
+   cd document-header-editor
 
    ```
 
