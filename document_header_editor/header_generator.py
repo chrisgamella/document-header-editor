@@ -1,6 +1,8 @@
 from pathlib import Path
 import os.path
-from document_header_editor import helper_docx
+from document_header_editor import helper_docx, helper_pdf, helper_scanned_pdf
+
+
 
 
 class HeaderGenerator:
@@ -12,6 +14,7 @@ class HeaderGenerator:
     logo_path = False
     text = '[Set the logo or text header]'
     text_font_size = 13
+    scanned_threshold = 24
 
 
     def __init__(self):
@@ -50,12 +53,17 @@ class HeaderGenerator:
         Returns:
             bool: Success or fail.
         """
+
         if self.file_type == '.docx':
             return helper_docx.save(self.src, path, self.logo_path, self.logo_width, self.text, self.text_font_size)
 
-        elif self.file_type == 'pdf':
-            pass
-        elif self.file_type in ['png', 'jpg']:
+        elif self.file_type == '.pdf':
+            if helper_scanned_pdf.count_characters_in_pdf(self.src) < self.scanned_threshold:
+                return helper_scanned_pdf.save(self.src, path, self.logo_path, self.logo_width, self.text, self.text_font_size)
+            else:
+                return helper_pdf.save(self.src, path, self.logo_path, self.logo_width, self.text, self.text_font_size)
+        
+        elif self.file_type in ['.png', '.jpg']:
             pass
 
         return False

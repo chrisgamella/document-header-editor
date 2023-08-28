@@ -1,6 +1,6 @@
 # Document Header Editor
 
-![Release Candidate](https://img.shields.io/badge/Release%20Candidate-0.01r-blue.svg)
+![Release Candidate](https://img.shields.io/badge/Release%20Candidate-16d2e3e-blue.svg)
 ![Build Status](https://img.shields.io/badge/Build%20Status-Passing-brightgreen.svg)
 
 The Document Header Editor is a versatile Python tool for adding headers to documents in various formats, including DOCX, PDF, and images. This library simplifies the process of customizing and adding headers to your documents programmatically.

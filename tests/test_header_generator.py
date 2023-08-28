@@ -38,3 +38,30 @@ class TestHeaderGenerator(unittest.TestCase):
         if os.path.exists(out_file): os.remove(out_file)
         a.save(out_file)
         self.assertTrue(os.path.exists(out_file))
+
+
+    def test_save_pdf(self):
+        folder = os.path.dirname(__file__)
+        a = header_generator.HeaderGenerator()
+        a.load(folder + os.path.sep + "test.pdf")
+        a.set_logo_header(folder + os.path.sep + "logo.png", 1)
+        
+        out_file = folder + os.path.sep + "test_pdf_out.docx"
+        if os.path.exists(out_file): os.remove(out_file)
+        a.save(out_file)
+        self.assertTrue(os.path.exists(out_file))
+
+
+    def test_save_scanned_pdf(self):
+        folder = os.path.dirname(__file__)
+        a = header_generator.HeaderGenerator()
+        a.load(folder + os.path.sep + "test_scanned.pdf")
+        a.set_logo_header(folder + os.path.sep + "logo.png", 1)
+        
+        out_file = folder + os.path.sep + "test_pdf_scanned_out.docx"
+        if os.path.exists(out_file): os.remove(out_file)
+        a.save(out_file)
+        self.assertTrue(os.path.exists(out_file))
+
+
+    
