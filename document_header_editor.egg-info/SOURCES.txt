@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+document_header_editor/__init__.py
+document_header_editor/header_generator.py
+document_header_editor/helper_docx.py
+document_header_editor/helper_image.py
+document_header_editor/helper_pdf.py
+document_header_editor/helper_scanned.py
+document_header_editor.egg-info/PKG-INFO
+document_header_editor.egg-info/SOURCES.txt
+document_header_editor.egg-info/dependency_links.txt
+document_header_editor.egg-info/requires.txt
+document_header_editor.egg-info/top_level.txt
+tests/__init__.py
+tests/test_header_generator.py
+tests/tmp.py
