@@ -40,3 +40,11 @@ def fetchurl(url):
 
 #http://localhost:5000/addheader/http%3A%2F%2Fjobsglobal.com%2Fapp02%2Ffs1%2Fe%2Fact%2Fget%2Fname%2F1591733_CV_1591733.docx
 #http://localhost:5000/addheader/https://jobsglobal.com/tree/bd3/c53cb946a6be64f6fc310835d.pdf
+
+
+
+
+
+
+if __name__ == '__main__':
+    app.run()
