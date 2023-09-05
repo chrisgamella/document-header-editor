@@ -27,7 +27,7 @@ def addHeader(cv):
     cleanup()
 
     cv_file = save_file.save_file_from_url(cv, f"{folder}/in")
-    out_file = f"{folder}/out/UNABLETOGENERATE.local"
+    out_file = f"{folder}/UNABLETOGENERATE.local"
 
     if cv_file:
         a = header_generator.HeaderGenerator()
