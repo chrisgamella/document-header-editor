@@ -27,7 +27,7 @@ def addHeader(cv):
     cleanup()
 
     cv_file = save_file.save_file_from_url(cv, f"{folder}/in")
-    out_file = "UNABLETOGENERATE.local"
+    out_file = f"{folder}/out/UNABLETOGENERATE.local"
 
     if cv_file:
         a = header_generator.HeaderGenerator()
@@ -36,7 +36,7 @@ def addHeader(cv):
         out_file_name = str(''.join(random.choices(string.ascii_lowercase + string.digits, k=7))) + ".docx"
         out_file = f"{folder}/out/{out_file_name}"
         a.save(out_file)
-        
+
     return out_file
     #return out_file_name, cv_file
     
