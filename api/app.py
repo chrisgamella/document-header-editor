@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_file
 from api import main
 
 
@@ -24,8 +24,12 @@ app = Flask(__name__)
 
 @app.route('/addheader/<path:url>', methods=['GET'])
 def addheader(url):
-    outf, inf =  main.addHeader(url)
-    return reply('ok', (outf, inf))
+    #outf, inf =  main.addHeader(url)
+    #return reply('ok', (outf, inf))
+    
+    #download
+    return send_file(main.addHeader(url), as_attachment=True)
+    
 
 
 @app.route('/fetchurl/<path:url>', methods=['GET'])
