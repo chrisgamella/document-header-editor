@@ -23,13 +23,13 @@ app = Flask(__name__)
 
 
 
-@app.route('/addheader/<path:url>', methods=['GET'])
+@app.route('/addheader/<url>', methods=['GET'])
 def addheader(url):
     #outf, inf =  main.addHeader(url)
     #return reply('ok', (outf, inf))
     
     #download
-    return send_file(main.addHeader(base64.b64decode(url)), as_attachment=True)
+    return send_file(main.addHeader(str(base64.b64decode(url).decode('ascii'))), as_attachment=True)
     
 
 
