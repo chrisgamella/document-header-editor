@@ -12,8 +12,8 @@ import sys
 sys.path.append("..")
 
 
-#folder = "{}/tmp".format(os.path.dirname(__file__))
-folder = config.tmp_folder
+folder = os.path.join(os.path.dirname(__file__), 'tmp')
+#folder = config.tmp_folder
 
 
 def cleanup():

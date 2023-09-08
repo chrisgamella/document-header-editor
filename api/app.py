@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify, send_file
 from api import main
 
 
+import base64
 import os
 import sys
 sys.path.append("..")
@@ -28,7 +29,7 @@ def addheader(url):
     #return reply('ok', (outf, inf))
     
     #download
-    return send_file(main.addHeader(url), as_attachment=True)
+    return send_file(main.addHeader(base64.b64decode(url)), as_attachment=True)
     
 
 
